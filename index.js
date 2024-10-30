@@ -6,10 +6,10 @@ const app = express();
 const PORT = 3000;
 const upload = multer();
 
-// Define the PDF character count function endpoint (POST)
+// Defines the PDF character count function endpoint (POST)
 app.post('/functions/pdfCharacterCount', upload.single('pdf'), pdfCharacterCount);
 
-// Define the documentation endpoint (GET)
+// Defines the documentation endpoint (GET)
 app.get('/functions/pdfCharacterCount', (req, res) => {
     res.json({
         name: 'pdfCharacterCount',
@@ -27,7 +27,7 @@ app.get('/functions/pdfCharacterCount', (req, res) => {
     });
 });
 
-// Start the server
+// Starts the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
