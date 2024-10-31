@@ -12,6 +12,13 @@ export default (req, res) => {
         //     return res.status(400).json({ error: 'inputText is required' });
         // }
 
+        // Function to identify palindromes
+        const findPalindromes = (text) => {
+            const words = text.toLowerCase().match(/\b\w+\b/g); // Extracts all words
+            return words.filter(word => word === word.split('').reverse().join('')); // Checks if word is palindrome
+        };
+
+        // Calculates character count and palindromes
         const characterCount = inputText.length;
         const palindromes = findPalindromes(inputText);
 
