@@ -8,9 +8,9 @@ export default (req, res) => {
     if (req.method === 'POST') {
         const { inputText } = req.body;
 
-        if (!inputText) {
-            return res.status(400).json({ error: 'inputText is required' });
-        }
+        // if (!inputText) {
+        //     return res.status(400).json({ error: 'inputText is required' });
+        // }
 
         const characterCount = inputText.length;
         const palindromes = findPalindromes(inputText);
