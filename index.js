@@ -18,9 +18,9 @@ app.post('/functions/palindromeFinder', (req, res) => {
     const { inputText } = req.body;
 
     // Checks if inputText exists
-    if (!inputText) {
-        return res.status(400).send({ error: 'inputText is required' });
-    }
+    // if (!inputText) {
+    //     return res.status(400).send({ error: 'inputText is required' });
+    // }
 
     // Calculates character count
     const characterCount = inputText.length;
